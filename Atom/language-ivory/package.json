@@ -1,0 +1,17 @@
+{
+  "name": "language-ivory",
+  "version": "0.1.0",
+  "description": "Ivory language support in Atom (by Lyof)",
+  "engines": {
+    "atom": "*"
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Toma400/IDE-plugins.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Toma400/IDE-plugins/issues"
+  },
+  "license": "MIT"
+}

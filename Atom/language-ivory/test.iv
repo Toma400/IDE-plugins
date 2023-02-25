@@ -1,0 +1,21 @@
+# will variable from here be counted/be used for functions or program?
+# or do you need to declare it after <start>?
+# will @checker then recognise .const and check it though?
+
+@fn
+  .var "is coming"
+  >> var
+  <back>
+
+@checker
+  check const = 10:        # (Loop: 5)
+    >> "sometimes"
+  <back>
+
+<start>
+.const 10
+>> "Winter"
+<9>
+<5>      # is precise goto useful if you can put #comment or code later?
+<end>    # (it may require a lot of debugging to find out if line is valid after
+            more code maintenance)

@@ -1,0 +1,42 @@
+'scopeName': 'source.ivory'
+'name':      'Ivory'
+'fileTypes': ['iv']
+
+'patterns': [
+    {
+        'match': '\\b(([0-9]+\\.?[0-9]*)|(\\.[0-9]+))\\b'
+        'name':  'constant.numeric.ivory'
+    },
+    {
+        'begin': '\"'
+        'end':   '\"'
+        'name':  'string.quoted.double.ivory'
+    },
+    {
+        'match': '(^|\\s)[>][>]'
+        'name':  'keyword.other.ivory'
+    },
+    {
+        'match': '(^|\\s)[.]\\w+'
+        'name':  'variable.ivory'
+    },
+    {
+        'match': '^(@)(\\w+)'
+        'captures':
+            '1':
+                'name': 'keyword.control.ivory'
+            '2':
+                'name': 'entity.name.function.ivory'
+        'name': 'meta.function.ivory'
+    },
+    {
+        'begin': '<'
+        'end':   '>'
+        'name':  'string.other.ivory'
+    }
+    # {
+    #     'begin': '(#)\\s(\()'
+    #     'end':   '(\))'
+    #     'name':  'keyword.control.ivory'
+    # }
+]
