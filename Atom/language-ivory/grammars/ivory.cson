@@ -33,6 +33,19 @@
         'begin': '<'
         'end':   '>'
         'name':  'string.other.ivory'
+    },
+    # {
+    #     'match': '?'
+    #     'name':  'keyword.control.ivory'
+    # },
+    {
+        'match': '(\\\\{2})\\s(\\w+:)'
+        'captures':
+            '1':
+                'name': 'keyword.operator.ivory'
+            '2':
+                'name': 'keyword.operator.ivory'
+        'name': 'meta.support.other.ivory'
     }
     # {
     #     'begin': '(#)\\s(\()'

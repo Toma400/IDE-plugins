@@ -8,6 +8,7 @@ you can use them freely as tool resource.
   - Plugins
     - Ivory (syntax highlight)
 
+---
 ✨ Light of the Stars
 
 | Name  |  IDE |  Type  | Subtype |                 Description                 | Status | Link |

@@ -8,7 +8,7 @@
   <back>
 
 @checker
-  check const = 10:        # (Loop: 5)
+  check const = 10:        \\ Loop: 5
     >> "sometimes"
   <back>
 
