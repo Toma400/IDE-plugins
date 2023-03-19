@@ -22,7 +22,15 @@
     },
     {
         'match': '(\\beternal\\b|\\bwhile\\b|\\bif\\b|\\belsif\\b|\\belse\\b|\\bfor\\b|\\bin\\b|\\btry\\b|\\broadsign\\b|\\bshaman\\b)'
-        'name':  'storage.modifier.tribal'
+        'name':  'entity.name.section.tribal'
+    },
+    {
+        'match': '(@\\w+)'
+        'name':  'markup.bold.tribal'
+    },
+    {
+        'match': '(\\bvoid.*)'
+        'name':  'support.variable.tribal'
     },
     # {
     #     'match': '(\\bwithdraw\\b|\\breturn\\b)'
