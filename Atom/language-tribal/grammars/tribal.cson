@@ -13,12 +13,16 @@
         'name':  'string.quoted.double.tribal'
     },
     {
-        'match': '(<<)|(>>)|(=>)'
+        'match': '(<<)|(>>)|(=>)|(\\b=\\b)'
         'name': 'keyword.control.tribal'
     },
     {
         'match': '(<:)|(:>)'
         'name': 'keyword.control.tribal'
+    },
+    {
+        'match': '(\\beternal\\b|\\bwhile\\b|\\bif\\b|\\belsif\\b|\\belse\\b|\\bfor\\b|\\bin\\b|\\btry\\b|\\broadsign\\b|\\bshaman\\b)'
+        'name':  'storage.modifier.tribal'
     },
     # {
     #     'match': '(\\bwithdraw\\b|\\breturn\\b)'
@@ -46,8 +50,13 @@
         'name': 'meta.function.tribal'
     },
     {
-        'match': '(\\.\\w+\\?|\\.\\w+\\(\\))'
-        'name':  'support.function.tribal' # ig this could be better
+        'match': '(\\w+)(\\.\\w+\\?|\\.\\w+\\(\\)|\\.\\w+)'
+        'captures':
+            '1':
+                'name': 'markup.heading.tribal'
+            '2':
+                'name': 'support.function.tribal'
+        'name': 'meta.variable.tribal'
     },
     {
         'match': '(\\|>.*)'
