@@ -1,0 +1,61 @@
+'scopeName': 'source.tribal'
+'name':      'Tribal'
+'fileTypes': ['rit']
+
+'patterns': [
+    {
+        'match': '\\b(([0-9]+\\.?[0-9]*)|(\\.[0-9]+))\\b'
+        'name':  'constant.numeric.tribal'
+    },
+    {
+        'begin': '\"'
+        'end':   '\"'
+        'name':  'string.quoted.double.tribal'
+    },
+    {
+        'match': '(<<)|(>>)|(=>)'
+        'name': 'keyword.control.tribal'
+    },
+    {
+        'match': '(<:)|(:>)'
+        'name': 'keyword.control.tribal'
+    },
+    # {
+    #     'match': '(\\bwithdraw\\b|\\breturn\\b)'
+    #     'name':  'keyword.control.tribal'
+    # },
+    # {
+    #     'match': '(\|\||&&)'
+    #     'name':  'keyword.operator.tribal'
+    # },
+    {
+        'match': '(\\bTrue\\b|\\bFalse\\b|\\bNil\\b)'
+        'name':  'constant.language.tribal'
+    },
+    {
+        'match': '(\\bint\\b|\\bstr\\b|\\bchar\\b|\\bdouble\\b|\\blist\\b|\\bdict\\b|\\benc\\b|\\barray\\b|\\bbool\\b|\\b\\[\\]\\b|\\b\\{\\}\\b)'
+        'name':  'entity.name.type.tribal'
+    },
+    { # does not count funcs with arguments tho
+        'match': '(town )(\\w+\\(\\))'
+        'captures':
+            '1':
+                'name': 'keyword.control.tribal'
+            '2':
+                'name': 'entity.name.function.tribal'
+        'name': 'meta.function.tribal'
+    },
+    {
+        'match': '(\\.\\w+\\?|\\.\\w+\\(\\))'
+        'name':  'support.function.tribal' # ig this could be better
+    },
+    {
+        'match': '(\\|>.*)'
+        'name':  'comment.line.character.tribal'
+    },
+    # {
+    #     'begin': '(\\|>>)'
+    #     'end':   '(<<\\|)'
+    #     'name':  'comment.block.tribal'
+    # }
+]
