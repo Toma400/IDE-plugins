@@ -21,7 +21,7 @@
         'name': 'keyword.control.tribal'
     },
     {
-        'match': '(\\beternal\\b|\\bwhile\\b|\\bif\\b|\\belsif\\b|\\belse\\b|\\bfor\\b|\\bin\\b|\\btry\\b|\\broadsign\\b|\\bshaman\\b)'
+        'match': '(\\beternal\\b|\\bwhile\\b|\\bif\\b|\\belsif\\b|\\belse\\b|\\bfor\\b|\\bin\\b|\\btry\\b|\\broadsign\\b|\\bshaman\\b|\\bwithdraw\\b|\\breturn\\b)'
         'name':  'entity.name.section.tribal'
     },
     {
@@ -49,7 +49,7 @@
         'name':  'entity.name.type.tribal'
     },
     { # does not count funcs with arguments tho
-        'match': '(evoke |ritual )(.*)'
+        'match': '(evoke |ritual |import |use )(.*)'
         'captures':
             '1':
                 'name': 'keyword.control.tribal'
@@ -58,10 +58,19 @@
         'name': 'meta.function.tribal'
     },
     {
-        'match': '(town |land |village )(\\w+)'
+        'match': '(town |land |village |def |class |eticet )(\\w+)'
         'captures':
             '1':
                 'name': 'keyword.control.tribal'
+            '2':
+                'name': 'entity.name.function.tribal'
+        'name': 'meta.function.tribal'
+    },
+    {
+        'match': '(tribe |enum )(\\w+)'
+        'captures':
+            '1':
+                'name': 'constant.language.tribal'
             '2':
                 'name': 'entity.name.function.tribal'
         'name': 'meta.function.tribal'
