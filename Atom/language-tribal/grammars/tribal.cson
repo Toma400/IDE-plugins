@@ -13,7 +13,7 @@
         'name':  'string.quoted.double.tribal'
     },
     {
-        'match': '(<<)|(>>)|(=>)|(\\b=\\b)'
+        'match': '(<<(?!\\|))|((?<!\\|)>>)|(=>)|(\\b=\\b)'
         'name': 'keyword.control.tribal'
     },
     {
@@ -41,7 +41,7 @@
     #     'name':  'keyword.operator.tribal'
     # },
     {
-        'match': '(\\bTrue\\b|\\bFalse\\b|\\bNil\\b)'
+        'match': '(\\btrue\\b|\\bfalse\\b|\\bnil\\b)'
         'name':  'constant.language.tribal'
     },
     {
@@ -49,7 +49,16 @@
         'name':  'entity.name.type.tribal'
     },
     { # does not count funcs with arguments tho
-        'match': '(town )(\\w+\\(\\))'
+        'match': '(evoke |ritual )(.*)'
+        'captures':
+            '1':
+                'name': 'keyword.control.tribal'
+            '2':
+                'name': 'entity.name.function.tribal'
+        'name': 'meta.function.tribal'
+    },
+    {
+        'match': '(town |land |village )(\\w+)'
         'captures':
             '1':
                 'name': 'keyword.control.tribal'
@@ -67,12 +76,12 @@
         'name': 'meta.variable.tribal'
     },
     {
-        'match': '(\\|>.*)'
+        'match': '(\\|>(?!>).*)'
         'name':  'comment.line.character.tribal'
     },
-    # {
-    #     'begin': '(\\|>>)'
-    #     'end':   '(<<\\|)'
-    #     'name':  'comment.block.tribal'
-    # }
+    {
+        'begin': '(\\|>>)'
+        'end':   '(<<\\|)'
+        'name':  'comment.block.tribal'
+    }
 ]
