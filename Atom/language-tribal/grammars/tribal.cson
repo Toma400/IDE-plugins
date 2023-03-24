@@ -32,14 +32,10 @@
         'match': '(\\bvoid.*)'
         'name':  'support.variable.tribal'
     },
-    # {
-    #     'match': '(\\bwithdraw\\b|\\breturn\\b)'
-    #     'name':  'keyword.control.tribal'
-    # },
-    # {
-    #     'match': '(\|\||&&)'
-    #     'name':  'keyword.operator.tribal'
-    # },
+    {
+        'match': '(\\|\\||&&)'
+        'name':  'keyword.operator.tribal'
+    },
     {
         'match': '(\\btrue\\b|\\bfalse\\b|\\bnil\\b)'
         'name':  'constant.language.tribal'
@@ -48,7 +44,7 @@
         'match': '(\\bint\\b|\\bstr\\b|\\bchar\\b|\\bdouble\\b|\\blist\\b|\\bdict\\b|\\benc\\b|\\barray\\b|\\bbool\\b|\\b\\[\\]\\b|\\b\\{\\}\\b)'
         'name':  'entity.name.type.tribal'
     },
-    { # does not count funcs with arguments tho
+    {
         'match': '(evoke |ritual |import |use )(.*)'
         'captures':
             '1':
