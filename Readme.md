@@ -7,10 +7,15 @@ you can use them freely as tool resource.
 - Atom
   - Plugins
     - Ivory (syntax highlight)
+    - Tribal (syntax highlight)
+  - Themes
+    - Subnautical
 
 ---
 ✨ Light of the Stars
 
-| Name  |  IDE |  Type  | Subtype |                 Description                 | Status | Link |
-|:-----:|:----:|:------:|:--------|:--------------------------------------------|:------:|:----:|
-| Ivory | Atom | Plugin | Syntax  | Adds syntax highlighting for Ivory language |  🟩   | None |
+| Name        |  IDE |  Type  | Subtype |                 Description                  | Status |                                       Link                                       |
+|:-----------:|:----:|:------:|:--------|:---------------------------------------------|:------:|:--------------------------------------------------------------------------------:|
+| Ivory       | Atom | Plugin | Syntax  | Adds syntax highlighting for Ivory language  |   🟩   |                                       None                                       |
+| Subnautical | Atom | Plugin |  Theme  | Adds underwater/steampunk theme for Atom IDE |   🟩   |                                       None                                       |
+| Tribal      | Atom | Plugin | Syntax  | Adds syntax highlighting for Tribal language |   🟩   | [None](https://github.com/Toma400/IDE-plugins/tree/a_dream/Atom/language-tribal) |
