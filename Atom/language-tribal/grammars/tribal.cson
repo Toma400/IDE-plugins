@@ -37,7 +37,7 @@
         'name':  'keyword.operator.tribal'
     },
     {
-        'match': '(\\btrue\\b|\\bfalse\\b|\\bnil\\b)'
+        'match': '(\\btrue\\b|\\bfalse\\b|\\bnil\\b|\\bnix\\b)'
         'name':  'constant.language.tribal'
     },
     {
