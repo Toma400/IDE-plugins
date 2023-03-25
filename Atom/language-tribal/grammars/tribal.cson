@@ -37,11 +37,11 @@
         'name':  'keyword.operator.tribal'
     },
     {
-        'match': '(\\btrue\\b|\\bfalse\\b|\\bnil\\b|\\bnix\\b)'
+        'match': '(\\b(true)\\b|\\b(false)\\b|\\b(nil)\\b|\\b(nix)\\b)'
         'name':  'constant.language.tribal'
     },
     {
-        'match': '(\\bint\\b|\\bstr\\b|\\bchar\\b|\\bdouble\\b|\\blist\\b|\\bdict\\b|\\benc\\b|\\barray\\b|\\bbool\\b|\\b\\[\\]\\b|\\b\\{\\}\\b)'
+        'match': '(\\b(int)\\b|\\b(str)\\b|\\b(char)\\b|\\b(double)\\b|\\b(list)\\b|\\b(dict)\\b|\\b(enc)\\b|\\b(array)\\b|\\b(bool)\\b|\\b(float)\\b|\\b(forest)\\b|\\b(tup)\\b|\\b(short)\\b|\\b(long)\\b|\\b(table)\\b)'
         'name':  'entity.name.type.tribal'
     },
     {
