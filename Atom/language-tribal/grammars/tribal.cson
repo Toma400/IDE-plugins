@@ -41,7 +41,7 @@
         'name':  'constant.language.tribal'
     },
     {
-        'match': '(\\b(int)\\b|\\b(str)\\b|\\b(char)\\b|\\b(double)\\b|\\b(list)\\b|\\b(dict)\\b|\\b(enc)\\b|\\b(array)\\b|\\b(bool)\\b|\\b(float)\\b|\\b(forest)\\b|\\b(tup)\\b|\\b(short)\\b|\\b(long)\\b|\\b(table)\\b)'
+        'match': '(\\b(int)\\b|\\b(str)\\b|\\b(char)\\b|\\b(double)\\b|\\b(list)\\b|\\b(dict)\\b|\\b(enc)\\b|\\b(array)\\b|\\b(bool)\\b|\\b(float)\\b|\\b(forest)\\b|\\b(tup)\\b|\\b(short)\\b|\\b(long)\\b|\\b(table)\\b|\\b(type)\\b|\\b(file)\\b|\\b(result)\\b)'
         'name':  'entity.name.type.tribal'
     },
     {
