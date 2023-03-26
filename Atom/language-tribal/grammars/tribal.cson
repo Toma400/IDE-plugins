@@ -32,19 +32,23 @@
         'match': '(\\bvoid.*)'
         'name':  'support.variable.tribal'
     },
-    {
-        'match': '(\\|\\||&&)'
+    {   # condition expressions
+        'match': '(\\|\\||&&|\\b(>)\\b|\\b(<)\\b|\\b(==)\\b)'
         'name':  'keyword.operator.tribal'
     },
-    {
+    {   # bool expressions
         'match': '(\\b(true)\\b|\\b(false)\\b|\\b(nil)\\b|\\b(nix)\\b)'
         'name':  'constant.language.tribal'
     },
-    {
+    {   # data type
         'match': '(\\b(int)\\b|\\b(str)\\b|\\b(char)\\b|\\b(double)\\b|\\b(list)\\b|\\b(dict)\\b|\\b(enc)\\b|\\b(array)\\b|\\b(bool)\\b|\\b(float)\\b|\\b(forest)\\b|\\b(tup)\\b|\\b(short)\\b|\\b(long)\\b|\\b(table)\\b|\\b(type)\\b|\\b(file)\\b|\\b(result)\\b)'
         'name':  'entity.name.type.tribal'
     },
-    {
+    {   # access type
+        'match': '(\\b(final)\\b|\\b(var)\\b|\\b(new)\\b|\\b(private)\\b|\\b(protected)\\b|\\b(closed)\\b|\\b(build)\\b)'
+        'name':  'entity.name.tag.tribal'
+    },
+    {   # import statements
         'match': '(evoke |ritual |import |use )(.*)'
         'captures':
             '1':
@@ -53,8 +57,8 @@
                 'name': 'entity.name.function.tribal'
         'name': 'meta.function.tribal'
     },
-    {
-        'match': '(town |land |village |def |class |eticet )(\\w+)'
+    {   # functions/classes
+        'match': '(town |land |village |def |class |eticet |mainland |entry )(\\w+)'
         'captures':
             '1':
                 'name': 'keyword.control.tribal'
@@ -62,7 +66,7 @@
                 'name': 'entity.name.function.tribal'
         'name': 'meta.function.tribal'
     },
-    {
+    {   # enum type
         'match': '(tribe |enum )(\\w+)'
         'captures':
             '1':
@@ -80,11 +84,11 @@
                 'name': 'support.function.tribal'
         'name': 'meta.variable.tribal'
     },
-    {
+    {   # comment (one-line)
         'match': '(\\|>(?!>).*)'
         'name':  'comment.line.character.tribal'
     },
-    {
+    {   # comment (multi-line)
         'begin': '(\\|>>)'
         'end':   '(<<\\|)'
         'name':  'comment.block.tribal'
