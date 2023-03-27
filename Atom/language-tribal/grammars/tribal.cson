@@ -41,12 +41,16 @@
         'name':  'constant.language.tribal'
     },
     {   # data type
-        'match': '(\\b(int)\\b|\\b(str)\\b|\\b(char)\\b|\\b(double)\\b|\\b(list)\\b|\\b(dict)\\b|\\b(enc)\\b|\\b(array)\\b|\\b(bool)\\b|\\b(float)\\b|\\b(forest)\\b|\\b(tup)\\b|\\b(short)\\b|\\b(long)\\b|\\b(table)\\b|\\b(type)\\b|\\b(file)\\b|\\b(result)\\b)'
+        'match': '(\\b(int)\\b|\\b(str)\\b|\\b(char)\\b|\\b(double)\\b|\\b(list)\\b|\\b(dict)\\b|\\b(enc)\\b|\\b(array)\\b|\\b(bool)\\b|\\b(float)\\b|\\b(forest)\\b|\\b(tup)\\b|\\b(short)\\b|\\b(long)\\b|\\b(table)\\b|\\b(type)\\b|\\b(file)\\b|\\b(result)\\b|\\b(colour)\\b)'
         'name':  'entity.name.type.tribal'
     },
     {   # access type
-        'match': '(\\b(final)\\b|\\b(var)\\b|\\b(new)\\b|\\b(private)\\b|\\b(protected)\\b|\\b(closed)\\b|\\b(build)\\b)'
+        'match': '(\\b(final)\\b|\\b(var)\\b|\\b(new)\\b|\\b(private)\\b|\\b(protected)\\b|\\b(closed)\\b|\\b(build)\\b|\\b(do)\\b)'
         'name':  'entity.name.tag.tribal'
+    },
+    {   # built-in functions
+        'match': '(\\b(whisper)\\b|\\b(scribe)\\b|\\b(scroll)\\b|\\b(dream)\\b)|\\b(travel)\\b'
+        'name':  'support.function.tribal'
     },
     {   # import statements
         'match': '(evoke |ritual |import |use )(.*)'
@@ -92,5 +96,9 @@
         'begin': '(\\|>>)'
         'end':   '(<<\\|)'
         'name':  'comment.block.tribal'
+    },
+    {   # comment (documentation)
+        'match': '(\\|:.*)'
+        'name':  'comment.block.documentation.tribal'
     }
 ]
