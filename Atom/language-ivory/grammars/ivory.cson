@@ -29,14 +29,18 @@
                 'name': 'entity.name.function.ivory'
         'name': 'meta.function.ivory'
     },
+    {   # bool expressions
+        'match': '(\\b(true)\\b|\\b(false)\\b)'
+        'name':  'constant.language.ivory'
+    },
     {
         'begin': '<'
         'end':   '>'
-        'name':  'string.other.ivory'
+        'name':  'entity.name.section.ivory'
     },
     # {
-    #     'match': '?'
-    #     'name':  'keyword.control.ivory'
+    #     'match': '(?)'
+    #     'name':  'entity.name.function.ivory'
     # },
     {
         'match': '(\\\\{2})\\s(\\w+:)'
