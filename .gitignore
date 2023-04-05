@@ -1,1 +1,9 @@
 .gitattributes
+
+# --- TEST FILES ---
+/Atom/language-ivory/test.iv
+
+# --- TODO spaces ---
+/JetBrains/language-tribal
+/Atom/subnautical-ui
+/Atom/language-delicc
