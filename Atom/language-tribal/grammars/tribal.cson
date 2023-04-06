@@ -13,7 +13,7 @@
         'name':  'string.quoted.double.tribal'
     },
     {
-        'match': '(<<(?!\\|))|((?<!\\|)>>)|(=>)|(\\b=\\b)'
+        'match': '(<<(?!\\|))|((?<!\\|)>>)|(=>)|(<=)'
         'name': 'keyword.control.tribal'
     },
     {
@@ -21,7 +21,7 @@
         'name': 'keyword.control.tribal'
     },
     {
-        'match': '(\\b(eternal)\\b|\\b(while)\\b|\\b(if)\\b|\\b(elsif)\\b|\\b(else)\\b|\\b(for)\\b|\\b(oldfor)\\b|\\b(in)\\b|\\b(try)\\b|\\b(roadsign)\\b|\\b(shaman)\\b|\\b(withdraw)\\b|\\b(return)\\b)'
+        'match': '(\\b(eternal)\\b|\\b(while)\\b|\\b(if)\\b|\\b(elsif)\\b|\\b(else)\\b|\\b(for)\\b|\\b(oldfor)\\b|\\b(in)\\b|\\b(try)\\b|\\b(except)\\b|\\b(from)\\b|\\b(roadsign)\\b|\\b(shaman)\\b|\\b(withdraw)\\b|\\b(return)\\b)'
         'name':  'entity.name.section.tribal'
     },
     {
@@ -45,11 +45,11 @@
         'name':  'entity.name.type.tribal'
     },
     {   # access type
-        'match': '(\\b(final)\\b|\\b(var)\\b|\\b(new)\\b|\\b(private)\\b|\\b(protected)\\b|\\b(closed)\\b|\\b(build)\\b|\\b(do)\\b|\\b(raise)\\b)'
+        'match': '(\\b(final)\\b|\\b(var)\\b|\\b(new)\\b|\\b(private)\\b|\\b(protected)\\b|\\b(closed)\\b|\\b(do)\\b|\\b(raise)\\b)'
         'name':  'entity.name.tag.tribal'
     },
     {   # built-in functions
-        'match': '(\\b(whisper)\\b|\\b(scribe)\\b|\\b(scroll)\\b|\\b(dream)\\b|\\b(travel)\\b)'
+        'match': '(\\b(whisper)\\b|\\b(scribe)\\b|\\b(scroll)\\b|\\b(dream)\\b|\\b(travel)\\b|\\b(build)\\b)'
         'name':  'support.function.tribal'
     },
     {   # import statements
