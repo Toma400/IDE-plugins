@@ -6,8 +6,8 @@ you can use them freely as tool resource.
 
 - Atom
   - Plugins
-    - [Ivory](https://github.com/Toma400/IDE-plugins/blob/a_dream/Atom/language-ivory.zip) (syntax highlight)
-    - [Tribal](https://github.com/Toma400/IDE-plugins/blob/a_dream/Atom/language-tribal.zip) (syntax highlight)
+    - [Ivory](https://github.com/Toma400/IDE-plugins/raw/a_dream/Atom/language-ivory.zip) (syntax highlight)
+    - [Tribal](https://github.com/Toma400/IDE-plugins/raw/a_dream/Atom/language-tribal.zip) (syntax highlight)
   - Themes
     - Subnautical
 
@@ -16,6 +16,6 @@ you can use them freely as tool resource.
 
 | Name        |        IDE       |  Type  | Subtype |                 Description                  | Status |                                         Link                                         |
 |:-----------:|:----------------:|:------:|:--------|:---------------------------------------------|:------:|:------------------------------------------------------------------------------------:|
-| Ivory       | Atom <br> Pulsar | Plugin | Syntax  | Adds syntax highlighting for Ivory language  |   🟩   | [Link](https://github.com/Toma400/IDE-plugins/blob/a_dream/Atom/language-ivory.zip)  |
-| Subnautical |        Atom      | Plugin |  Theme  | Adds underwater/steampunk theme              |   🟩   |                                         None                                         |
-| Tribal      | Atom <br> Pulsar | Plugin | Syntax  | Adds syntax highlighting for Tribal language |   🟩   | [Link](https://github.com/Toma400/IDE-plugins/blob/a_dream/Atom/language-tribal.zip) |
+| Ivory       | Atom <br> Pulsar | Plugin | Syntax  | Adds syntax highlighting for Ivory language  |   🟩   | [Link](https://github.com/Toma400/IDE-plugins/raw/a_dream/Atom/language-ivory.zip)  |
+| Subnautical |        Atom      | Plugin |  Theme  | Adds underwater/steampunk theme              |   🟩   |                                         None                                        |
+| Tribal      | Atom <br> Pulsar | Plugin | Syntax  | Adds syntax highlighting for Tribal language |   🟩   | [Link](https://github.com/Toma400/IDE-plugins/raw/a_dream/Atom/language-tribal.zip) |

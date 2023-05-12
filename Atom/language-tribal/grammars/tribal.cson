@@ -21,7 +21,7 @@
         'name': 'keyword.control.tribal'
     },
     {
-        'match': '(\\b(eternal)\\b|\\b(while)\\b|\\b(if)\\b|\\b(elsif)\\b|\\b(else)\\b|\\b(for)\\b|\\b(loop)\\b|\\b(in)\\b|\\b(try)\\b|\\b(except)\\b|\\b(from)\\b|\\b(roadsign)\\b|\\b(shaman)\\b|\\b(withdraw)\\b|\\b(return)\\b)'
+        'match': '(\\b(eternal)\\b|\\b(while)\\b|\\b(if)\\b|\\b(elsif)\\b|\\b(else)\\b|\\b(for)\\b|\\b(loop)\\b|\\b(in)\\b|\\b(try)\\b|\\b(except)\\b|\\b(from)\\b|\\b(roadsign)\\b|\\b(shaman)\\b|\\b(withdraw)\\b|\\b(return)\\b|\\b(fallthrough)\\b|\\b(continue)\\b|\\b(yield)\\b)'
         'name':  'entity.name.section.tribal'
     },
     {
@@ -29,11 +29,11 @@
         'name':  'markup.bold.tribal'
     },
     {
-        'match': '(\\bvoid((\\s)|[^ ]+))'
+        'match': '(\\bvoid((\\s)|[^ ]+)|(pass))'
         'name':  'support.variable.tribal'
     },
     {   # condition expressions
-        'match': '(\\|\\||&&|\\b(>)\\b|\\b(<)\\b|\\b(==)\\b|\\b(<>)\\b)'
+        'match': '(\\|\\||(&&)|\\b(:=)\\b|\\b(=)\\b)'
         'name':  'keyword.operator.tribal'
     },
     {   # bool expressions
@@ -41,11 +41,11 @@
         'name':  'constant.language.tribal'
     },
     {   # data type
-        'match': '(\\b(int)\\b|\\b(str)\\b|\\b(char)\\b|\\b(double)\\b|\\b(list)\\b|\\b(dict)\\b|\\b(enc)\\b|\\b(array)\\b|\\b(bool)\\b|\\b(float)\\b|\\b(forest)\\b|\\b(tup)\\b|\\b(short)\\b|\\b(long)\\b|\\b(aint)\\b|\\b(afloat)\\b|\\b(table)\\b|\\b(struct)\\b|\\b(fortress)\\b|\\b(any)\\b|\\b(empty)\\b|\\b(func)\\b|\\b(type)\\b|\\b(file)\\b|\\b(result)\\b|\\b(cls)\\b|\\b(self)\\b|\\b(colour)\\b|\\b(dye)\\b)'
+        'match': '(\\b(int)\\b|\\b(str)\\b|\\b(char)\\b|\\b(double)\\b|\\b(list)\\b|\\b(dict)\\b|\\b(enc)\\b|\\b(array)\\b|\\b(bool)\\b|\\b(float)\\b|\\b(forest)\\b|\\b(tup)\\b|\\b(short)\\b|\\b(long)\\b|\\b(aint)\\b|\\b(afloat)\\b|\\b(rune)\\b|\\b(glyph)\\b|\\b(table)\\b|\\b(struct)\\b|\\b(fortress)\\b|\\b(any)\\b|\\b(empty)\\b|\\b(func)\\b|\\b(type)\\b|\\b(file)\\b|\\b(result)\\b|\\b(colour)\\b|\\b(dye)\\b)'
         'name':  'entity.name.type.tribal'
     },
     {   # access type
-        'match': '(\\b(final)\\b|\\b(var)\\b|\\b(new)\\b|\\b(private)\\b|\\b(protected)\\b|\\b(closed)\\b|\\b(do)\\b|\\b(raise)\\b)'
+        'match': '(\\b(final)\\b|\\b(var)\\b|\\b(new)\\b|\\b(private)\\b|\\b(protected)\\b|\\b(closed)\\b|\\b(open)\\b|\\b(do)\\b|\\b(raise)\\b)'
         'name':  'entity.name.tag.tribal'
     },
     {   # built-in functions
@@ -62,7 +62,7 @@
         'name': 'meta.function.tribal'
     },
     {   # functions/classes
-        'match': '(town |land |village |def |class |island |interface |eticet |mainland |entry )(\\w+)'
+        'match': '(town |land |village |def |class |island |interface |eticet |tavern |proc )(\\w+)'
         'captures':
             '1':
                 'name': 'keyword.control.tribal'
@@ -71,13 +71,17 @@
         'name': 'meta.function.tribal'
     },
     {   # enum type
-        'match': '(tribe |enum )(\\w+)'
+        'match': '(tribe |enum |mainland |entry )(\\w+)'
         'captures':
             '1':
                 'name': 'constant.language.tribal'
             '2':
                 'name': 'entity.name.function.tribal'
         'name': 'meta.function.tribal'
+    },
+    {
+        'match': '(\\b(cls)\\b|\\b(self)\\b)'
+        'name':  'entity.name.type.tribal'
     },
     {
         'match': '(\\w+)(\\.\\w+\\?|\\.\\w+\\(\\)|\\.\\w+)'
