@@ -2,27 +2,48 @@
 'name':      'Tribal'
 'fileTypes': ['rit', 'rin']
 
+# TODO:
+# - documentation comments having some HTML/MD support?
+# - getting rid of red colour in access modifiers
+
 'patterns': [
-    {
-        'match': '\\b(([0-9]+\\.?[0-9]*)|(\\.[0-9]+))\\b'
-        'name':  'constant.numeric.tribal'
-    },
     {
         'begin': '\"'
         'end':   '\"'
         'name':  'string.quoted.double.tribal'
+        'patterns': [
+            {  # interpolation
+                'begin': '{'
+                'end':   '}'
+                'name':  'entity.name.tag.tribal'
+                'patterns': [
+                    {
+                        'match': '([\\w|\\d|\\s|\\.|\\(|\\)|?|!|\"]*)'
+                        'name':  'entity.name.type.tribal'
+                    }
+                ]
+            },
+            {  # escape character
+                'match': '((\\\\)(.))'
+                'name':  'constant.numeric.tribal'
+            }
+        ]
+    },
+    {
+        'match': '\\b(([0-9]+\\.?[0-9]*)|(\\.[0-9]+))\\b'
+        'name':  'constant.numeric.tribal'
     },
     {
         'match': '(<<(?!\\|))|((?<!\\|)>>)|(=>)|(<=)'
         'name': 'keyword.control.tribal'
     },
     {
-        'match': '((<:)|(:>)|(<!)|(!>))'
+        'match': '((<:)|(:>)|(<!)|(!>))' # ?:
         'name': 'keyword.control.tribal'
     },
     {
         'match': '(\\b(eternal)\\b|\\b(while)\\b|\\b(if)\\b|\\b(elsif)\\b|\\b(else)\\b|\\b(for)\\b|\\b(loop)\\b|\\b(in)\\b|\\b(try)\\b|\\b(except)\\b|\\b(from)\\b|\\b(roadsign)\\b|\\b(shaman)\\b|\\b(withdraw)\\b|\\b(return)\\b|\\b(fallthrough)\\b|\\b(continue)\\b|\\b(yield)\\b)'
-        'name':  'entity.name.section.tribal'
+        'name':  'entity.name.section.tribal' # where 'block' and all that?
     },
     {
         'match': '(@\\w+)'
@@ -30,7 +51,7 @@
     },
     {
         'match': '(\\bvoid((\\s)|[^ ]+)|(pass))'
-        'name':  'support.variable.tribal'
+        'name':  'constant.numeric.tribal'
     },
     {   # condition expressions
         'match': '(\\|\\||(&&)|(<>)|(:=)|(=))' # "=" may break
@@ -40,16 +61,25 @@
         'match': '(\\b(true)\\b|\\b(false)\\b|\\b(nil)\\b|\\b(nix)\\b)'
         'name':  'constant.language.tribal'
     },
+    {   # ..!..() macro function
+        'match': '(to!|cast!|err!|exc!)(\\w+)'
+        'captures':
+            '1':
+                'name': 'support.function.tribal'
+            '2':
+                'name': 'entity.name.type.tribal'
+        'name': 'meta.function.tribal'
+    }
     {   # data type
         'match': '(\\b(int)\\b|\\b(str)\\b|\\b(char)\\b|\\b(double)\\b|\\b(list)\\b|\\b(dict)\\b|\\b(enc)\\b|\\b(array)\\b|\\b(bool)\\b|\\b(float)\\b|\\b(forest)\\b|\\b(tup)\\b|\\b(short)\\b|\\b(long)\\b|\\b(aint)\\b|\\b(afloat)\\b|\\b(rune)\\b|\\b(glyph)\\b|\\b(table)\\b|\\b(struct)\\b|\\b(fortress)\\b|\\b(any)\\b|\\b(empty)\\b|\\b(pair)\\b|\\b(triad)\\b|\\b(func)\\b|\\b(type)\\b|\\b(file)\\b|\\b(exc)\\b|\\b(err)\\b|\\b(result)\\b|\\b(colour)\\b|\\b(dye)\\b)'
         'name':  'entity.name.type.tribal' # result? empty? (however empty I've seen once) + table + forest + tup are not explained
     },
     {   # access type
         'match': '(\\b(final)\\b|\\b(var)\\b|\\b(new)\\b|\\b(private)\\b|\\b(protected)\\b|\\b(closed)\\b|\\b(open)\\b|\\b(do)\\b|\\b(raise)\\b)' # 'open/closed' & 'do' needs rethinking
-        'name':  'entity.name.tag.tribal'
+        'name':  'support.function.tribal'
     },
     {   # built-in functions
-        'match': '(\\b(whisper)\\b|\\b(echo)\\b|\\b(scribe)\\b|\\b(scroll)\\b|\\b(dream)\\b|\\b(travel)\\b|\\b(build)\\b|\\b(book)\\b|\\b(library)\\b|\\b(wall)\\b)' # 'build' needs rethinking # what is 'book/library concept?' (https://discord.com/channels/657297170936102937/1031580792427642971/1084091799557128312 ??)
+        'match': '(\\b(whisper)\\b|\\b(echo)\\b|\\b(scribe)\\b|\\b(some)\\b|\\b(none)\\b|\\b(dream)\\b|\\b(travel)\\b|\\b(scroll)\\b|\\b(build)\\b|\\b(book)\\b|\\b(library)\\b|\\b(wall)\\b|\\b(recruit)\\b)' # 'build' needs rethinking # what is 'book/library concept?' (https://discord.com/channels/657297170936102937/1031580792427642971/1084091799557128312 ??) + where is 'break'?
         'name':  'support.function.tribal'
     },
     {   # import statements
@@ -102,7 +132,32 @@
         'name':  'comment.block.tribal'
     },
     {   # comment (documentation)
-        'match': '(\\|:.*)'
+        'begin': '(\\|:)'
+        'end':   '(\\n)'
         'name':  'comment.block.documentation.tribal'
+        'patterns': [ # HTML/Markdown
+            {
+                'begin': '(\\s#{1,5}\\s)'
+                'end':   '(\\n)'
+                'name':  'markup.heading.tribal'
+            },
+            {
+                'match': '((\\*)((\\w|\\d|\\s)+)(\\*))'
+                'name':  'markup.italic.tribal'
+            },
+            {
+                'match': '((\\*\\*)((\\w|\\d|\\s)+)(\\*\\*))'
+                'name':  'markup.bold.tribal'
+            },
+            {
+                'begin': '(<)'
+                'end':   '(>)'
+                'name':  'markup.raw.tribal'
+            },
+            {
+                'match': '((?<=\\|:)(\\s*-\\s))'
+                'name':  'keyword.operator.tribal'
+            }
+        ]
     }
 ]
